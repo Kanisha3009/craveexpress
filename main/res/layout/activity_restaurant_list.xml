@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".RestaurantListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/faded_green">
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="Location Icon"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="70dp"
+                android:text="Seksyen 13, Shah Alam"
+                android:textColor="#1F6C45"
+                android:textSize="19sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <ImageView
+                android:id="@+id/userProfile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="User Profile"
+                android:src="@drawable/ic_user" />
+
+
+        </LinearLayout>
+
+        <!-- Promo Banner -->
+        <ImageView
+            android:id="@+id/promoBanner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/promo_image"
+            android:contentDescription="Promotional Banner" />
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Search Icon"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:hint="What are you looking for?"
+                android:background="@android:color/transparent"
+                android:textColor="#000"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <!-- Category Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/categoryRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Restaurant"
+                android:background="@color/nude_green"
+                android:textColor="#1F6C45" />
+
+            <Button
+                android:id="@+id/categoryRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Recommended"
+                android:background="@color/nude_green"
+                android:textColor="#1F6C45" />
+
+            <Button
+                android:id="@+id/categoryOffers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Offers"
+                android:background="@color/nude_green"
+                android:textColor="#1F6C45" />
+
+            <Button
+                android:id="@+id/categoryOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="More"
+                android:background="@color/nude_green"
+                android:textColor="#1F6C45" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- RecyclerView for restaurant list -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/restaurantRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_restaurant"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

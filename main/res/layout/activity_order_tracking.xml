@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:padding="16dp">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CraveExpress"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/dark_green" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Thank you for choosing CraveExpress!
+        We have received your order"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/dark_green" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Rider Map Image"
+        android:scaleType="centerInside"
+        android:src="@drawable/ridermap_1" />
+
+    <TextView
+        android:id="@+id/trackingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Tracking"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:indeterminate="false"
+        android:max="100" />
+
+    <Button
+        android:id="@+id/confirmhomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="HOMEPAGE" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="LOGOUT" />
+
+</LinearLayout>
